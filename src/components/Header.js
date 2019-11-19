@@ -18,8 +18,8 @@ const Header = ({cart,rfc,hs}) => {
         <header className="header">
             <p className="header__logo">BEER SHOP</p>
             <Search className={"header"} hs={hs}/>
-            <div className="header__box">
-                <img className={isVisible ? "header__cartIcon header__cartIcon--active" : "header__cartIcon"} src={isVisible ? cartImageBlack : cartImage} onClick={handleDisplayDesc}></img>
+            <div className="header__box" onClick={handleDisplayDesc}>
+                <img className={isVisible ? "header__cartIcon header__cartIcon--active" : "header__cartIcon"} src={isVisible ? cartImageBlack : cartImage}></img>
                 <span className="header__cartQuantity">{amount}</span>
             </div>
             {isVisible ? <ShoppingCart cart={cart} rfc={rfc}/> : null}
