@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 
 const Product = ({name, img, description,id,fn}) => {
     const [isVisible,setVisible] = useState(false);
@@ -17,7 +17,7 @@ const Product = ({name, img, description,id,fn}) => {
         if(quantity>1)
             setQuantity(quantity-1);
     }
-
+ 
     return ( 
         <div className="product">
             <img tabIndex="0" src="https://img.icons8.com/ios/24/000000/info.png" alt="image" className="product__info" onMouseOver={handleDisplayDesc} onMouseOut={handleDisplayDesc} onFocus={handleDisplayDesc} onBlur={handleDisplayDesc}></img>

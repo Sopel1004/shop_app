@@ -16,7 +16,6 @@ const Header = ({cart,rfc,hs}) => {
 
     return ( 
         <header className="header">
-            <p className="header__logo">BEER SHOP</p>
             <Search className={"header"} hs={hs}/>
             <div className="header__box" onClick={handleDisplayDesc}>
                 <img className={isVisible ? "header__cartIcon header__cartIcon--active" : "header__cartIcon"} src={isVisible ? cartImageBlack : cartImage}></img>
