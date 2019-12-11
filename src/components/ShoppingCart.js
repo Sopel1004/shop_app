@@ -16,8 +16,6 @@ const ShoppingCart = ({cart,rfc}) => {
                 <button className="shoppingCart__summary__checkout">Checkout</button>
             </div>
         </div>
-        
-        
     );
 }
  

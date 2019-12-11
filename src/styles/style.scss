@@ -50,9 +50,10 @@ body{
             outline: none;
             padding: 0 5px 0 45px;
             transition: width .5s ease, opacity 0.25s;
+            transform-origin: left;
 
             &--active{
-                width: 250px;
+                width: 200px;
                 opacity: 1;
             }
             
@@ -78,6 +79,7 @@ body{
 
             &:hover{
                 cursor: pointer;
+                background-color: rgb(34, 34, 34);
             }
 
         }
@@ -135,6 +137,7 @@ body{
     background-color: $cartBgColor;
     z-index: 40;
     border: 1px solid $borderColor;
+    border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -400,4 +403,19 @@ body{
     transform: translate(-50%);
     z-index: 100;
     text-align: center;
+}
+
+.shoppingCart-enter {
+    opacity: 0;
+}
+.shoppingCart-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.shoppingCart-exit {
+    opacity: 1;
+}
+.shoppingCart-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
 }

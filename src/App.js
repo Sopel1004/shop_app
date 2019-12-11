@@ -19,7 +19,11 @@ function App() {
 
   const addToCart = (id,quantity) => {
     //const item = e.target.parentNode.dataset.id;
-    if(cart.find(el => el.id===id)) cart.map(el => el.id===id ? el.quantity+=quantity : false);
+    if(cart.find(el => el.id===id)){
+      cart.map(el => el.id===id ? el.quantity+=quantity : false);
+      setIsAdd(!isAdd);
+    }
+     
     else{
       const foundItem = data.find( el => el.id===id);
       const item = {
@@ -66,13 +70,13 @@ function App() {
 
         setData(result);
       };
-
+      console.log("ok");
       fetchData();
     }
     catch(error){
       console.log(error);
     }
-  }, [data]);
+  }, []);
 
   return (
     <>
